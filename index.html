@@ -1,183 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Parisienne&family=Passero+One&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Parisienne&family=Passero+One&display=swap" rel="stylesheet">
+  <link href="https://googleapis.com" rel="stylesheet">
 
-<title>LiveChat</title>
-
-<style>
-
-/* PAGE */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.chat-page {
-  background: #FDFDF8;
-  min-height: 100vh;
-}
-
-/* HEADER */
-.chat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #069506;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.whatsapp-btn img {
-  width: 20px;
-}
-
-/* NAV */
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-}
-
-/* DOWNLOAD */
-.download-btn {
-  background: #319F43;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* CENTER SECTION */
-.chat-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* 🔥 CENTER EVERYTHING */
-  justify-content: center;
-  margin-top: 120px;
-}
-
-/* LOGO */
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-/* "One" */
-.one-text {
-  font-family: 'Parisienne', cursive;
-  font-size: 100px;
-  line-height: 110px;
-
-  background: linear-gradient(
-    133deg,
-    #2AEFEF,
-    #D300A5,
-    #E21717
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* "Event" */
-.event-text {
-  font-family: 'Passero One', sans-serif;
-  font-size: 60px;
-  margin-top: -20px; /* slight overlap like design */
-}
-
-/* BUTTON */
-.chat-btn {
-  background: #319F43;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 25px;
-  font-size: 18px;
-  margin: 20px 0;
-  cursor: pointer;
-}
-
-/* TEXT */
-.small-text {
-  margin-top: 20px;
-}
-
-.download-link {
-  color: #1CA3F7;
-  text-decoration: none;
-}
-
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<section class="chat-page">
+  <!-- ✅ Container START -->
+  <div class="container">
 
-  <!-- HEADER -->
-  <div class="chat-header">
-    <button class="whatsapp-btn">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-      WhatsApp
-    </button>
+    <div class="navbar">
 
-    <div class="nav-links">
-      <a href="#">Features</a>
-      <a href="#">Privacy</a>
-      <a href="#">Help Center</a>
-      <a href="#">Blog</a>
-      <a href="#">For Business</a>
-      <a href="#">Apps</a>
+      <!-- LEFT → LOGO -->
+      <div class="logo-container">
+        <div class="one-text">One</div>
+        <div class="event-text">Event</div>
+      </div>
+
+      <!-- CENTER → NAV -->
+      <div class="nav-center">
+       <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="venue.html">Venue</a>
+          <a href="supplier.html">Suppliers</a>
+          <a href="media.html">Media</a>
+          <a href="about.html">About</a>
+          <a href="contactus.html">Contact</a>
+        </div>
+      </div>
+
+      <!-- RIGHT → AUTH -->
+      <div class="auth">
+        <a href="login.html">Login</a>
+        <a href="signup.html" >Sign Up</a>
+      </div>
+
+    </div>  <!-- ✅ Navbar END -->
+  
+    <!--Hero Section-->
+  <section class="hero hero-home">
+  <div class="hero-content">
+    <h1>Your Wedding, Your Way</h1>
+     
+   <div class="search-wrapper">
+
+      <!-- CATEGORY -->
+      <div class="search-box">
+        <select id="category" class="hero-dropdown">
+          <option disabled selected>Select Category</option>
+          <option>Decorators</option>
+          <option>Venue</option>
+          <option>Planners</option>
+          <option>Choreographers</option>
+          <option>Makeup Artist</option>
+          <option>Bar Services</option>
+          <option>Designers</option>
+          <option>Celebrant</option>
+          <option>Honeymoon</option>
+          <option>Photographer</option>
+          <option>Videographer</option>
+        </select>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="search-box">
+        <select id="location" class="hero-dropdown">
+          <option disabled selected>Select Location</option>
+          <option>Chennai</option>
+          <option>Mumbai</option>
+          <option>Madurai</option>
+          <option>Delhi</option>
+          <option>Dubai</option>
+          <option>Kanniyakumari</option>
+          <option>Tirunelveli</option>
+          <option>Bangalore</option>
+          <option>Tiruvananthapuram</option>
+          <option>Kochi</option>
+        </select>
+      </div>
+
+      <!-- BUTTON -->
+      <button class="hero-search-btn" onclick="handleSearch()">Search</button>
+
+    </div>
+  </div>
+  </section> <!-- Hero Section END -->
+
+  <!-- Card Section -->
+  <section class="cards-section">
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="images/img1.png" alt="">
+      <h3>DESTINATION WEDDINGS</h3>
     </div>
 
-    <button class="download-btn">Download</button>
-  </div>
-
-  <!-- CENTER -->
-  <div class="chat-center">
-
-    <!-- LOGO -->
-    <div class="logo-container">
-      <div class="one-text">One</div>
-      <div class="event-text">Event</div>
+    <div class="card">
+      <img src="images/img2.png" alt="">
+      <h3>HONEYMOON & TRAVEL WEDDING</h3>
     </div>
 
-    <!-- BUTTON -->
-    <button class="chat-btn">Continue With Chat</button>
+    <div class="card">
+      <img src="images/img3.png" alt="">
+      <h3>VIDEOGRAPHERS WEDDING</h3>
+    </div>
 
-    <!-- TEXT -->
-    <p class="small-text">Don’t have WhatsApp yet?</p>
-    <a href="#" class="download-link">Download</a>
+    <div class="card">
+      <img src="images/img4.png " alt="">
+      <h3>CELEBRANT</h3>
+    </div>
 
   </div>
 
-</section>
+  <!-- Pagination -->
+  <div class="pagination">
 
+    <button class="arrow">&#171;</button>
+
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+
+    <button class="arrow">&#187;</button>
+
+  </div>
+</section> <!-- Card Section END -->
+
+<!-- Popular Venue Section START-->
+<div class="section-header"> 
+  <h2>Popular Venue</h2>
+  <span class="view-all">View All (1000)</span>
+</div>
+
+<section class="cards-section">
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="images/img4.png" alt="">
+      <h3>CELEBRANT</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/cimg-2.png" alt="">
+      <h3>MAKEUP ARTIST</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/cimg-3.png" alt="">
+      <h3>WEDDING VENUE</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/cimg-4.png" alt="">
+      <h3>DECORATORS</h3>
+    </div>
+
+  </div> <!-- Popular Venue Section END -->
+
+  <!-- Pagination START-->
+  <div class="pagination">
+
+    <button class="arrow">&#171;</button>
+
+    <button>1</button>
+    <button class="active">2</button>
+    <button>3</button>
+
+    <button class="arrow">&#187;</button>
+
+  </div>
+</section> <!-- Popular Venue Section END -->
+
+<!-- Rectangle Box START-->
+<div class="rectangle-box">
+
+  <!-- LEFT IMAGE -->
+  <div class="rect-left">
+    <img src="images/r-1.png" alt="wedding">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="rect-right">
+    <h2>Yours Dreams, Our Dreams...</h2>
+
+    <p>
+      The "best" wedding photography style is subjective and depends on the couple's preferences.
+    </p>
+
+    <button>View</button>
+  </div>
+
+</div> <!-- Rectangle Box END -->
+
+<!-- Video Section START-->
+<div class="section-header">
+  <h2>Featured Videos</h2>
+  <span class="view-all">View All (50)</span>
+</div>
+
+<section class="video-section">
+
+  <div class="video-cards">
+
+    <!-- Card -->
+    <div class="video-card">
+      <img src="images/video1.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video2.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video3.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video4.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="video-card">
+      <img src="images/video5.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video6.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video7.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <img src="images/video8.png" alt="">
+      <div class="card-bottom">
+        <h3>Wedding Video</h3>
+      </div>
+    </div>
+
+  </div>
+</section> <!-- Video Section END -->
+
+<!--Reviews Section START -->
+<section class="reviews">
+
+  <h2 class="reviews-title">Reviews</h2>
+
+  <div class="reviews-wrapper">
+
+    <!-- LEFT CARD -->
+    <div class="review-card side">
+      <p>
+        Aihole is one of the least explored architectural treasures in Karnataka,
+        offering a wedding experience like no other amidst ancient temples and carvings.
+      </p>
+      <h3>John</h3>
+    </div>
+
+    <!-- CENTER CARD (ACTIVE) -->
+    <div class="review-card active">
+
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar">
+
+      <button class="nav-btn left">❮</button>
+      <button class="nav-btn right">❯</button>
+
+      <h3>Celin</h3>
+
+      <p>
+        Aihole is one of the least explored architectural treasures in Karnataka,
+        offering a wedding experience like no other amidst ancient temples and carvings.
+      </p>
+
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="review-card side">
+      <p>
+        Aihole is one of the least explored architectural treasures in Karnataka,
+        offering a wedding experience like no other amidst ancient temples and carvings.
+      </p>
+      <h3>Kamala</h3>
+    </div>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</section> <!-- Reviews Section END -->
+
+<!-- ✅ Footer START -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT: LOGO + SOCIAL -->
+    <div class="footer-left">
+      <div class="logo-container">
+        <div class="one-text">One</div>
+        <div class="event-text">Event</div>
+      </div>
+
+      <h3>Social Media</h3>
+      <div class="social-icons">
+          <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2168/2168281.png" alt="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384030.png" alt="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter">
+      </div>
+    </div>
+
+    <!-- VENUES -->
+    <div class="footer-col">
+      <h3>Venues</h3>
+      <ul>
+        <li>Chennai</li>
+        <li>Mumbai</li>
+        <li>Dubai</li>
+        <li>Delhi</li>
+        <li>Madurai</li>
+        <li>Kanniyakumari</li>
+      </ul>
+    </div>
+
+    <!-- SUPPLIERS -->
+    <div class="footer-col">
+      <h3>Suppliers</h3>
+      <ul>
+        <li>Photographers</li>
+        <li>Decorators</li>
+        <li>Venues</li>
+        <li>Planner</li>
+        <li>Choreographers</li>
+        <li>Designers</li>
+        <li>Makeup Artists</li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Contact Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Newsletter</h3>
+      <p>Subscribe to get latest media updates</p>
+
+      <div class="newsletter-box">
+        <input type="text" placeholder="Enter email">
+        <button>Subscribe</button>
+      </div>
+
+      <button class="chat-btn" id="liveChatBtn">Live Chat</button>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <div class="footer-bottom">
+    Made with ❤️ by thecreation.design
+  </div>
+
+</footer> <!-- ✅ Footer END -->
+
+  </div>   <!-- ✅ Container END -->
+<script src="script.js"></script>
 </body>
 </html>
