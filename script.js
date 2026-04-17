@@ -59,17 +59,9 @@ function handleSearch() {
   alert(`Searching for ${category} in ${location}`);
 }
 
-// Button-Live Chat
-const chatBtn = document.getElementById("liveChatBtn");
-
-if (chatBtn) {
-  chatBtn.addEventListener("click", function () {
-    window.location.href = "livechat.html";
-  });
-}
-
 //REVIEW CARD
 const reviews = [
+  
   {
     name: "John",
     text: "Aihole is one of the least explored architectural treasures in Karnataka, offering a wedding experience like no other amidst ancient temples and carvings.",
@@ -207,3 +199,7 @@ Venue: ${venue}
 Space: ${space}
 Rating: ${rating}`);
 }
+
+document.getElementById("liveChatBtn").addEventListener("click", function() {
+  window.location.href = "chat.html";
+});
