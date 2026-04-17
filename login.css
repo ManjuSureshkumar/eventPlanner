@@ -1,0 +1,149 @@
+    /* ================= LOGIN PAGE ================= */
+
+    /* Wrapper */
+    .login-container {
+    max-width: 1400px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    }
+
+    /* LEFT IMAGE */
+    /* IMAGE CONTAINER */
+    .login-image {
+    width: 660px;
+    height: 696px;
+    position: relative; /* ✅ important */
+    }
+
+    /* IMAGE */
+    .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%); /* matches your design */
+    }
+
+    /* TEXT OVER IMAGE */
+    .image-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 70%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    }
+
+    /* MAIN HEADING */
+    .image-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 85px;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+    }
+
+    /* SUB TEXT */
+    .image-text p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    }
+
+    /* RIGHT FORM */
+    .login-form {
+    width: 640px;
+    height: 696px;
+    position: relative;
+    }
+
+    /* DARK BACKGROUND */
+    .login-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.7);
+    }
+
+    /* INNER FIGMA FORM */
+    .login-figma {
+    position: absolute;
+    width: 435px;
+    top: 100px;
+    left: 100px;
+    color: white;
+    }
+
+    /* HEADER */
+    .login-figma h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    }
+
+    .login-figma .sub-text {
+    font-size: 17px;
+    color: #F4F6FC;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    }
+
+    /* INPUT BOX */
+    .input-box {
+    margin-bottom: 20px;
+    }
+
+    .input-box input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0 15px;
+    font-size: 18px;
+    }
+
+    .input-box input::placeholder {
+    color: rgba(255,255,255,0.7);
+    }
+
+    /* REMEMBER */
+    .remember {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 15px;
+    }
+
+    .remember input {
+    width: 20px;
+    height: 20px;
+    }
+
+    /* BUTTON */
+    .login-btn {
+    width: 100%;
+    height: 60px;
+    background: white;
+    color: #1E1E1E;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    }
+
+    /* REGISTER TEXT */
+    .register-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    }

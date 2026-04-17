@@ -1,0 +1,797 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+/* ✅ Main Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  color: black;
+}
+
+/* ✅ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+/* ✅ Center Section */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* spacing between nav links and auth */
+}
+
+/* ✅ Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 0; /* ❌ remove vertical spacing */
+}
+
+.nav-links a {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #1E1E1E;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s ease;
+}
+
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.nav-links a.active {
+  font-weight: 700;
+}
+
+/* ✅ Auth (Login / Signup) */
+.auth {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.auth a {
+ position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.auth a::after {
+content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #1E1E1E;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s ease;
+}
+
+/* active state */
+.auth a.active::after {
+  transform: scaleX(1);
+}
+
+/* bold on active */
+.auth a.active {
+  font-weight: 700;
+}
+
+/* ✅ Logo Container */
+.logo-container {
+  position: relative;
+  width: 226px;
+  height: 152px;
+}
+
+/* ✅ "One" Gradient Text */
+.one-text {
+  position: absolute;
+  left: 10px;
+  top: 0;
+
+  font-family: 'Parisienne', cursive;
+  font-size: 96px;
+  line-height: 131px;
+
+  background: linear-gradient(
+    133.29deg,
+    #2AEFEF 6.22%,
+    #D300A5 52.1%,
+    #E21717 93.78%
+  );
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✅ "Event" Text */
+.event-text {
+  position: absolute;
+  left: 78px;
+  top: 94px;
+  font-family: 'Passero One', sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000;
+}
+
+/*Hero Section*/
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 577px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; 
+}
+
+/* 🔥 RIGHT SIDE POSITIONING */
+.hero-media .hero-content  {
+  position: absolute;
+  right:120px;    
+  top: 50%;
+  transform: translateY(-50%); 
+  width: 800px; 
+  text-align: right; 
+  z-index: 2;
+}
+
+/* TEXT STYLE */
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0;
+}
+
+/* Home */
+.hero-home {
+  background-image: url("images/hero-home.jpg");
+}
+
+/* Venue */
+.hero-venue {
+  background-image: url("images/hero-venue.png");
+}
+
+/* Supplier */
+.hero-supplier {
+  background-image: url("images/hero-supplier.png");
+}
+
+/* Media */
+.hero-media {
+  background-image: url("images/hero-media.png");
+}
+
+.hero-about{
+  background-image: url("images/hero-about.png");
+}
+
+.hero-contactus{
+  background-image: url("images/hero-contactus.png");
+}
+/* Optional overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Content inside hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Wrapper */
+.search-wrapper {
+  width: 1200px;
+  margin: 80px auto;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Box */
+.search-box {
+  flex: 1;
+}
+
+/* Dropdown */
+.hero-dropdown {
+  width: 100%;
+  height: 82px;
+
+  border: 1px solid #ACACAC;
+  border-radius: 10px;
+
+  font-size: 20px;
+  padding: 0 20px;
+
+  appearance: none;
+  -webkit-appearance: none;
+ 
+  background-color: white;
+
+  background-image: url("https://cdn-icons-png.flaticon.com/128/8567/8567254.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 14px;
+}
+
+/* Dropdown option */
+.dropdown option {
+  font-size: 20px;
+  padding: 10px 20px;
+ 
+  background: url("https://cdn-icons-png.flaticon.com/128/8567/8567254.png")
+              no-repeat right 15px center;
+  background-size: 14px;
+
+  cursor: pointer;
+}
+
+/* HERO BUTTON */
+.hero-search-btn {
+  flex: 1;
+  height: 82px;
+
+  background: #B8B8B8;
+  border: 1px solid #949494;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Section */
+.cards-section {
+  max-width: 1400px;
+  margin: 80px auto;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 50px;
+}
+
+/* Card */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.pagination button {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #CACACA;
+  background: #F4F4F4;
+  cursor: pointer;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* Active */
+.pagination .active {
+  background: #FFFFFF;
+}
+
+/* Arrow */
+.pagination .arrow {
+  background: #BCBCBC;
+}
+
+.section-header {
+  max-width: 1400px;
+  margin: 60px auto 20px;
+
+  display: flex;
+  justify-content: space-between; /* 🔥 left + right */
+  align-items: center;
+
+  padding: 0 50px; /* match your card spacing */
+}
+
+/* Left text */
+.section-header h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  line-height: 100%;
+}
+
+/* Right text */
+.view-all {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  line-height: 100%;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* Section */
+.cards-section {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 50px; /* 🔥 left + right spacing */
+}
+
+/* Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.rectangle-box {
+  max-width: 1276px;
+  margin: 80px auto;
+  padding: 40px;
+
+  background: #F4F4F4;
+  border: 2px solid #000;
+  border-radius: 1px;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT IMAGE */
+.rect-left img {
+  width: 396px;
+  height: 396px;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+/* RIGHT CONTENT */
+.rect-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.rect-right h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Paragraph */
+.rect-right p {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  max-width: 600px;
+  letter-spacing: normal;
+}
+
+/* Button */
+.rect-right button {
+  align-self: center; /* ✅ moves button to right */
+  
+  padding: 15px 50px;
+  font-size: 20px;
+
+  background: #BDBDBD; /* match grey in image */
+  color: black;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Section */
+.video-section {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 50px;
+}
+
+/* Grid */
+.video-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 🔥 4 per row */
+  gap: 30px;
+}
+
+/* Card */
+.video-card {
+  border-radius: 10px;
+}
+
+/* Image */
+.video-card img {
+  width: 100%;
+  height: 212px;
+  object-fit: cover;
+
+  border: 1px solid #ACACAC;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Bottom box */
+.card-bottom {
+  height: 107px;
+  border: 1px solid #ACACAC;
+  border-top: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0 0 10px 10px;
+}
+
+/* Text */
+.card-bottom h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #F5F5F5;
+  padding: 60px 80px 20px;
+}
+
+/* CONTAINER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* LEFT SECTION */
+.footer-left {
+  max-width: 250px;
+}
+
+.footer-left h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+  margin-left: 35px;
+}
+
+/* ICON STYLE */
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  filter: brightness(0); /* 🔥 makes icons pure black */
+  transition: 0.3s ease;
+}
+
+/* COLUMNS */
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-left h3 {
+  margin-left: 40px /* 👈 moves text LEFT */
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* NEWSLETTER */
+.footer-newsletter {
+  max-width: 280px;
+}
+
+.footer-newsletter h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+/* INPUT */
+.newsletter-box {
+  display: flex;
+  border: 1px solid #ACACAC;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.newsletter-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.newsletter-box button {
+  padding: 10px 15px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* CHAT BUTTON */
+.chat-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: rgba(0,0,0,0.6);
+}
+
+/*REVIEW SECTION*/
+.reviews {
+  padding: 80px 100px;
+  background: white;
+}
+
+/* TITLE */
+.reviews-title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+/* WRAPPER */
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* CARD BASE */
+.review-card {
+  width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  background: #C4C4C4;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* move left */
+.move-left {
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
+/* move right */
+.move-right {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+/* SIDE CARDS */
+.review-card.side {
+  width: 420px;              /* 👈 smaller */
+  height: 190px;
+  opacity: 0.25;
+  transform: scale(0.9);
+  background: #d9d9d9;
+}
+
+/* ACTIVE CENTER CARD */
+.review-card.active {
+  width: 600px;              /* 👈 bigger */
+  height: 240px;
+  background: #bdbdbd;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -60px; /* 👈 overlap effect */
+}
+
+.review-card.side:first-child {
+  margin-right: -80px;
+}
+
+.review-card.side:last-child {
+  margin-left: -80px;
+}
+
+/* TEXT */
+.review-card p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.review-card h3 {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* AVATAR */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ARROWS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.review-card.side .avatar {
+  display: none;
+}
+
+.review-card.active p {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.review-card.side p {
+  font-size: 16px;
+}
+.nav-btn.left {
+  left: -25px;
+}
+
+.nav-btn.right {
+  right: -25px;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.dot.active {
+  background: #555;
+}
+

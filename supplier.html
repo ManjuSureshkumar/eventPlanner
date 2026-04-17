@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Parisienne&family=Passero+One&display=swap" rel="stylesheet">
+  <link href="https://googleapis.com" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="supplier.css">
+</head>
+<body>
+
+  <!-- ✅ Container START -->
+  <div class="container">
+
+    <div class="navbar">
+
+      <!-- LEFT → LOGO -->
+      <div class="logo-container">
+        <div class="one-text">One</div>
+        <div class="event-text">Event</div>
+      </div>
+
+      <!-- CENTER → NAV -->
+      <div class="nav-center">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="venue.html">Venue</a>
+          <a href="supplier.html">Suppliers</a>
+          <a href="media.html">Media</a>
+          <a href="about.html">About</a>
+          <a href="contactus.html">Contact</a>
+        </div>
+      </div>
+
+      <!-- RIGHT → AUTH -->
+      <div class="auth">
+        <a href="login.html">Login</a>
+        <a href="signup.html" >Sign Up</a>
+      </div>
+
+    </div>  <!-- ✅ Navbar END -->
+  
+    <!--Hero Section-->
+  <section class="hero hero-supplier">
+  <div class="hero-content">
+    <h1>Our Suppliers</h1>
+     
+   <div class="search-wrapper">
+
+      <!-- CATEGORY -->
+      <div class="search-box">
+        <select id="category" class="hero-dropdown">
+          <option disabled selected>Select Category</option>
+          <option>Decorators</option>
+          <option>Venue</option>
+          <option>Planners</option>
+          <option>Choreographers</option>
+          <option>Makeup Artist</option>
+          <option>Bar Services</option>
+          <option>Designers</option>
+          <option>Celebrant</option>
+          <option>Honeymoon</option>
+          <option>Photographer</option>
+          <option>Videographer</option>
+        </select>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="search-box">
+        <select id="location" class="hero-dropdown">
+          <option disabled selected>Select Location</option>
+          <option>Chennai</option>
+          <option>Mumbai</option>
+          <option>Madurai</option>
+          <option>Delhi</option>
+          <option>Dubai</option>
+          <option>Kanniyakumari</option>
+          <option>Tirunelveli</option>
+          <option>Bangalore</option>
+          <option>Tiruvananthapuram</option>
+          <option>Kochi</option>
+        </select>
+      </div>
+
+      <!-- BUTTON -->
+      <button class="hero-search-btn" onclick="handleSearch()">Search</button>
+
+    </div>
+  </div>
+  </section> <!-- ✅ Hero Section END -->
+  
+  <!-- Supplier Category Section -->
+  <section class="supplier-section">
+  <h2 class="section-title">Suppliers Categories</h2>
+
+  <div class="supplier-container">
+
+    <!-- Card 1 -->
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-1.png');"></div>
+      <p class="supplier-name">Photographer / Videographer</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-2.png');"></div>
+      <p class="supplier-name">Decorators</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-3.png');"></div>
+      <p class="supplier-name">Venues</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-4.png');"></div>
+      <p class="supplier-name">Makeup Artists</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-5.png');"></div>
+      <p class="supplier-name">Catering</p>
+    </div>
+
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-6.png');"></div>
+      <p class="supplier-name">Mehendi</p>
+    </div>
+
+    <div class="supplier-card">
+      <div class="supplier-image" style="background-image: url('images/supplier-7.png');"></div>
+      <p class="supplier-name">Music & DJ</p>
+    </div>
+
+  </div>
+</section>  <!-- Supplier Category Section END -->
+
+<!-- Popular Photos Section  -->
+ <section class="popular-section">
+
+  <!-- Header -->
+  <div class="popular-header">
+    <h2>Popular Photographers / Videographers</h2>
+    <span class="view-all">View All (22)</span>
+  </div>
+
+  <!-- Cards -->
+  <div class="popular-container">
+
+    <!-- Card 1 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/popular1.png')"></div>
+      <h3 class="card-title">UIO Videos <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/popular2.png')"></div>
+      <h3 class="card-title">QWE Videos <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/popular3.png')"></div>
+      <h3 class="card-title">XYZ Videos <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/popular4.png')"></div>
+      <h3 class="card-title">ABC Videos <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button>«</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>»</button>
+  </div>
+
+</section> <!-- Popular Photos Section END -->
+
+<section class="popular-section">
+
+  <!-- Header -->
+  <div class="popular-header">
+    <h2>Trending Designers</h2>
+    <span class="view-all">View All (22)</span>
+  </div>
+
+  <!-- Cards -->
+  <div class="popular-container">
+
+    <!-- Card 1 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/trending1.png')"></div>
+      <h3 class="card-title">RTY Designers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/trending2.png')"></div>
+      <h3 class="card-title">WER Designers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/trending3.png')"></div>
+      <h3 class="card-title">SDF Designers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/trending4.png')"></div>
+      <h3 class="card-title">ASV Designers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+  </div>
+    <!-- Pagination -->
+  <div class="pagination">
+    <button>«</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>»</button>
+  </div>
+
+</section> <!-- Trending Section END -->
+<!---- ************************************* ---->
+
+<!-- Danser Section START-->
+<section class="popular-section">
+
+  <!-- Header -->
+  <div class="popular-header">
+    <h2>Dansers</h2>
+    <span class="view-all">View All (22)</span>
+  </div>
+
+  <!-- Cards -->
+  <div class="popular-container">
+
+    <!-- Card 1 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/danser1.png')"></div>
+      <h3 class="card-title">MNO Dansers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/danser2.png')"></div>
+      <h3 class="card-title">BHY Dansers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/danser3.png')"></div>
+      <h3 class="card-title">WDR Dansers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="popular-card">
+      <div class="card-img" style="background-image:url('images/danser4.png')"></div>
+      <h3 class="card-title">PQR Dansers <br> Chennai</h3>
+
+      <div class="card-rating">
+        <div class="stars">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+          <img src="images/star.png">
+        </div>
+        <span class="rating-text">5 (22)</span>
+      </div>
+    </div>
+
+  </div>
+</section> <!-- Danser Section END -->
+
+<!-- Rectangle Box START-->
+<div class="rectangle-box">
+
+  <!-- LEFT IMAGE -->
+  <div class="rect-left">
+    <img src="images/r-3.png" alt="wedding">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="rect-right">
+    <h2>Yours Dreams, Our Dreams...</h2>
+
+    <p>
+      We love to hear from our precious users. For any feedback or queries simply write in to...
+    </p>
+
+    <button>View</button>
+  </div>
+
+</div> <!-- Rectangle Box END -->
+
+
+
+
+  <!-- ✅ Footer START -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT: LOGO + SOCIAL -->
+    <div class="footer-left">
+      <div class="logo-container">
+        <div class="one-text">One</div>
+        <div class="event-text">Event</div>
+      </div>
+
+      <h3>Social Media</h3>
+      <div class="social-icons">
+          <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2168/2168281.png" alt="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384030.png" alt="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter">
+      </div>
+    </div>
+
+    <!-- VENUES -->
+    <div class="footer-col">
+      <h3>Venues</h3>
+      <ul>
+        <li>Chennai</li>
+        <li>Mumbai</li>
+        <li>Dubai</li>
+        <li>Delhi</li>
+        <li>Madurai</li>
+        <li>Kanniyakumari</li>
+      </ul>
+    </div>
+
+    <!-- SUPPLIERS -->
+    <div class="footer-col">
+      <h3>Suppliers</h3>
+      <ul>
+        <li>Photographers</li>
+        <li>Decorators</li>
+        <li>Venues</li>
+        <li>Planner</li>
+        <li>Choreographers</li>
+        <li>Designers</li>
+        <li>Makeup Artists</li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Contact Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Newsletter</h3>
+      <p>Subscribe to get latest media updates</p>
+
+      <div class="newsletter-box">
+        <input type="text" placeholder="Enter email">
+        <button>Subscribe</button>
+      </div>
+
+      <button class="chat-btn" id="liveChatBtn">Live Chat</button>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <div class="footer-bottom">
+    Made with ❤️ by thecreation.design
+  </div>
+
+</footer> <!-- ✅ Footer END -->
+
+  </div>   <!-- ✅ Container END -->
+<script src="script.js"></script>
+</body>
+</html>

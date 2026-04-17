@@ -1,0 +1,102 @@
+.contact {
+  display: flex;
+  justify-content: flex-start; /* 👈 LEFT SIDE */
+  padding: 100px 73px;
+  gap: 80px;
+}
+
+/* FORM CONTAINER */
+.contact-form {
+  width: 600px;
+}
+
+/* TITLE */
+.contact-form h2 {
+  font-family: 'Poppins';
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+/* EACH FIELD */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* LABEL */
+.form-group label {
+  display: block;
+  font-family: 'Poppins';
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #424242;
+}
+
+/* INPUT + TEXTAREA */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ACACAC;
+  border-radius: 10px;
+  font-family: 'Poppins';
+}
+
+/* TEXTAREA HEIGHT */
+.form-group textarea {
+  height: 200px;
+  resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  height: 70px;
+  background: #B8B8B8;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 73px;
+  gap: 80px;
+}
+
+/* LEFT FORM */
+.contact-form {
+  width: 600px;
+}
+
+/* RIGHT INFO */
+.contact-info {
+  width: 600px;
+}
+
+/* EACH BLOCK */
+.info-block {
+  margin-bottom: 30px;
+}
+
+/* TITLE */
+.info-block h3 {
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.info-block p {
+  font-family: 'Poppins';
+  font-size: 18px;
+  line-height: 28px;
+  color: #555;
+}
